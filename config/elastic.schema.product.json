@@ -4,13 +4,15 @@
        "url_key": {"type": "keyword"},
        "url_path": {"type": "keyword"},
        "slug": {"type": "keyword"},
-       "size": {"type": "integer"},
-       "size_options": {"type": "integer"},
+       "core": {"type": "keyword"},
+      "stripe_sub_enabled":{"type": "keyword"},
+       "ram": {"type": "keyword"},
+       "storage": {"type": "keyword"},
+       "location": {"type": "keyword"},
        "price": {"type": "float"},
        "has_options": {"type": "keyword"},            
        "special_price": {"type": "float"},
-       "color": {"type": "integer"},
-       "color_options": {"type": "integer"},
+      
        "pattern": {"type": "text"},
        "id": {"type": "long"},
        "status": {"type": "integer"},
@@ -48,7 +50,9 @@
                "sku": {"type": "keyword"},
                "has_options": {"type": "keyword"},
                "price": {"type": "float"},
-               "special_price": {"type": "float"}
+               "location": {"type": "keyword"},
+               "storage": {"type": "keyword"},
+               "special_price": {"type": "float"}, "stripe_sub_enabled":{"type": "keyword"}
             }
         },
        "configurable_options": {
@@ -58,6 +62,7 @@
                "label": {"type": "text"},
                "frontend_label": {"type": "text"},   
                "store_label": {"type": "text"},
+               "storage": {"type": "keyword"},
                "values": {
                    "properties": {
                        "default_label": {"type": "text"},
@@ -70,13 +75,10 @@
             }
         },
        "category_ids": {"type": "long"},
-       "eco_collection": {"type": "integer"},
-       "eco_collection_options": {"type": "integer"},
-       "erin_recommends": {"type": "integer"},
+       
        "tax_class_id": {"type": "integer"},
-       "gender": {"type": "integer"},
-       "material": {"type": "integer"},
-       "category_gear": {"type": "integer"},
+    
+      
        "attributes_metadata": {
             "properties": {
                 "id": {"type": "integer"},
